@@ -1,4 +1,9 @@
-import { StyleSheet, Text, View, Alert, Button, Image, ScrollView } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View
+} from "react-native";
 
 export default function Index() {
   return (
@@ -18,12 +23,11 @@ export default function Index() {
         </View>
       </View>
 
-
-
       <Text style={styles.caption} numberOfLines={6}>
         "On your left."
         {"\n\n"}
-        Relive the experience when Avengers Endgame: Encore returns to theaters on September 25. Get tickets now: {" "}
+        Relive the experience when Avengers Endgame: Encore returns to theaters
+        on September 25. Get tickets now:{" "}
         <Text style={styles.link}>Fandango.com/AvengersEndgameEncore</Text>
       </Text>
 
@@ -42,8 +46,16 @@ export default function Index() {
         <Text style={styles.engagementText}>💬 Comment</Text>
         <Text style={styles.engagementText}>↗️ 8 Share</Text>
       </View>
+
+      <View style={styles.tabBar}>
+        <Text style={[styles.tab, styles.activeTab]}>🏠</Text>
+        <Text style={styles.tab}>▶️</Text>
+        <Text style={styles.tab}>🏪</Text>
+        <Text style={styles.tab}>🤍</Text>
+        <Text style={styles.tab}>🔔</Text>
+        <Text style={styles.tab}>☰</Text>
+      </View>
     </View>
-    
   );
 }
 
@@ -92,7 +104,6 @@ const styles = StyleSheet.create({
     color: "gray",
   },
 
-
   caption: {
     marginTop: 8,
     fontSize: 13,
@@ -117,5 +128,23 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: "#444",
   },
+  tabBar: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    marginTop: "auto",
+    paddingVertical: 4,
+    borderWidth: 1,
+    borderColor: "#DDDDDD",
+    borderRadius: 30,
+  },
+  tab: {
+    fontSize: 22,
+    paddingHorizontal: 8,
+  },
+  activeTab: {
+    backgroundColor: "#E7F0FF",
+    borderRadius: 15,
+    overflow: "hidden",
+  },
 });
-
