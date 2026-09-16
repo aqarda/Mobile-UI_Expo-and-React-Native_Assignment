@@ -1,9 +1,4 @@
-import {
-  Image,
-  StyleSheet,
-  Text,
-  View
-} from "react-native";
+import { StyleSheet, Text, View, Alert, Button, Image } from "react-native";
 
 export default function Index() {
   return (
@@ -55,9 +50,17 @@ export default function Index() {
         <Text style={styles.tab}>🔔</Text>
         <Text style={styles.tab}>☰</Text>
       </View>
+
+      <View style={styles.alertButtonWrapper}>
+        <Button
+          title="Alert"
+          onPress={() => Alert.alert("Alert Button pressed")}
+        />
+      </View>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -115,13 +118,13 @@ const styles = StyleSheet.create({
   },
   postImage: {
     width: "100%",
-    height: 225,
+    height: 200,
     borderRadius: 4,
   },
   engagementRow: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 8,
+    marginTop: 10,
     paddingHorizontal: 4,
   },
   engagementText: {
@@ -132,7 +135,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    marginTop: "auto",
+    marginTop: 12,
     paddingVertical: 4,
     borderWidth: 1,
     borderColor: "#DDDDDD",
@@ -147,4 +150,9 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     overflow: "hidden",
   },
+
+  alertButtonWrapper: {
+    marginTop: 12,
+    alignItems: "center",
+  }
 });
