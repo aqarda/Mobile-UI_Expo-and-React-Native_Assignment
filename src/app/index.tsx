@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Alert, Button, Image, ScrollView } from "react-native";
 
 export default function Index() {
   return (
@@ -17,7 +17,33 @@ export default function Index() {
           <Text style={styles.gray}>2h · 🌐</Text>
         </View>
       </View>
+
+
+
+      <Text style={styles.caption} numberOfLines={6}>
+        "On your left."
+        {"\n\n"}
+        Relive the experience when Avengers Endgame: Encore returns to theaters on September 25. Get tickets now: {" "}
+        <Text style={styles.link}>Fandango.com/AvengersEndgameEncore</Text>
+      </Text>
+
+      <Image
+        source={require("../../assets/images/firstImage.jpeg")}
+        style={styles.postImage}
+      />
+
+      <Image
+        source={require("../../assets/images/secondImage.jpeg")}
+        style={styles.postImage}
+      />
+
+      <View style={styles.engagementRow}>
+        <Text style={styles.engagementText}>👍 388</Text>
+        <Text style={styles.engagementText}>💬 Comment</Text>
+        <Text style={styles.engagementText}>↗️ 8 Share</Text>
+      </View>
     </View>
+    
   );
 }
 
@@ -65,4 +91,31 @@ const styles = StyleSheet.create({
   gray: {
     color: "gray",
   },
+
+
+  caption: {
+    marginTop: 8,
+    fontSize: 13,
+    lineHeight: 17,
+    marginBottom: 8,
+  },
+  link: {
+    color: "#0866FF",
+  },
+  postImage: {
+    width: "100%",
+    height: 225,
+    borderRadius: 4,
+  },
+  engagementRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 8,
+    paddingHorizontal: 4,
+  },
+  engagementText: {
+    fontSize: 13,
+    color: "#444",
+  },
 });
+
